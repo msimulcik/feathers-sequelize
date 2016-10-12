@@ -47,7 +47,7 @@ export function getOrder(sort={}) {
       case 2:
         direction = 'ASC NULLS FRIST';
         break;
-      deafult:
+      default:
         direction = 'ASC';
         break;
     }
