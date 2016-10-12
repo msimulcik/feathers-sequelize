@@ -35,8 +35,24 @@ export function errorHandler(error) {
 export function getOrder(sort={}) {
   let order = [];
 
-  Object.keys(sort).forEach(name =>
-    order.push([ name, parseInt(sort[name], 10) === 1 ? 'ASC' : 'DESC' ]));
+  Object.keys(sort).forEach(name => {
+    let direction;
+    switch (parseInt(sort[name], 10)) {
+      case -2:
+        direction = 'DESC NULLS LAST';
+        break;
+      case -1:
+        direction = 'DESC';
+        break;
+      case 2:
+        direction = 'ASC NULLS FRIST';
+        break;
+      deafult:
+        direction = 'ASC';
+        break;
+    }
+    order.push([ name, direction ]);
+  });
 
   return order;
 }
