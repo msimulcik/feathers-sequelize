@@ -39,7 +39,13 @@ class Service {
       q.attributes = filters.$select;
     }
 
-    return this.Model.findAndCount(q).then(result => {
+    let findMethod = 'findAndCount'
+
+    if(filters.$skipCount) {
+      findMethod = 'findAll'
+    }
+
+    return this.Model[findMethod](q).then(result => {
       return {
         total: result.count,
         limit: filters.$limit,
