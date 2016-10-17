@@ -26,6 +26,8 @@ class Service {
 
   _find(params, getFilter = filter) {
     const { filters, query } = getFilter(params.query || {});
+    filters.$skipCount = query.$skipCount;
+    omit(query, ['$skipCount']);
     const where = utils.getWhere(query);
     const order = utils.getOrder(filters.$sort);
 
