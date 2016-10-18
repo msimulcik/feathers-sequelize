@@ -25,9 +25,9 @@ class Service {
   }
 
   _find(params, getFilter = filter) {
-    const { filters, query } = getFilter(params.query || {});
-    filters.$skipCount = query.$skipCount;
-    omit(query, ['$skipCount']);
+    let { filters, query } = getFilter(params.query || {});
+    filters.$includeCount = query.$includeCount;
+    query = omit(query, ['$includeCount']);
     const where = utils.getWhere(query);
     const order = utils.getOrder(filters.$sort);
 
@@ -41,18 +41,22 @@ class Service {
       q.attributes = filters.$select;
     }
 
-    let findMethod = 'findAndCount'
-
-    if(filters.$skipCount) {
-      findMethod = 'findAll'
+    if(filters.$includeCount) {
+      return this.Model.findAndCount(q).then(result => {
+        return {
+          total: result.count,
+          limit: filters.$limit,
+          skip: filters.$skip || 0,
+          data: result.rows
+        };
+      }).catch(utils.errorHandler);
     }
 
-    return this.Model[findMethod](q).then(result => {
+    return this.Model.findAll(q).then(result => {
       return {
-        total: result.count,
         limit: filters.$limit,
         skip: filters.$skip || 0,
-        data: result.rows
+        data: result
       };
     }).catch(utils.errorHandler);
   }
