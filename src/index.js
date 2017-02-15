@@ -26,8 +26,8 @@ class Service {
 
   _find(params, getFilter = filter) {
     let { filters, query } = getFilter(params.query || {});
-    filters.$includeCount = query.$includeCount;
-    query = omit(query, ['$includeCount']);
+    filters.$$includeCount = query.$$includeCount;
+    query = omit(query, ['$$includeCount']);
     const where = utils.getWhere(query);
     const order = utils.getOrder(filters.$sort);
 
@@ -41,7 +41,7 @@ class Service {
       q.attributes = filters.$select;
     }
 
-    if(filters.$includeCount) {
+    if(filters.$$includeCount) {
       return this.Model.findAndCount(q).then(result => {
         return {
           total: result.count,
