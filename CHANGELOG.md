@@ -1,8 +1,77 @@
 # Change Log
 
-## [Unreleased](https://github.com/feathersjs/feathers-sequelize/tree/HEAD)
+## [v1.4.5](https://github.com/feathersjs/feathers-sequelize/tree/v1.4.5) (2017-03-26)
+[Full Changelog](https://github.com/feathersjs/feathers-sequelize/compare/v1.4.4...v1.4.5)
 
-[Full Changelog](https://github.com/feathersjs/feathers-sequelize/compare/v1.3.2...HEAD)
+**Merged pull requests:**
+
+- Fix update no dao [\#101](https://github.com/feathersjs/feathers-sequelize/pull/101) ([lowip](https://github.com/lowip))
+
+## [v1.4.4](https://github.com/feathersjs/feathers-sequelize/tree/v1.4.4) (2017-03-24)
+[Full Changelog](https://github.com/feathersjs/feathers-sequelize/compare/v1.4.3...v1.4.4)
+
+**Closed issues:**
+
+- Relation between Models not working. [\#98](https://github.com/feathersjs/feathers-sequelize/issues/98)
+- Can we create nested models in one go? [\#97](https://github.com/feathersjs/feathers-sequelize/issues/97)
+- Add example for model relations [\#20](https://github.com/feathersjs/feathers-sequelize/issues/20)
+
+**Merged pull requests:**
+
+- checking for the toJSON method on the instance before calling it [\#100](https://github.com/feathersjs/feathers-sequelize/pull/100) ([lowip](https://github.com/lowip))
+
+## [v1.4.3](https://github.com/feathersjs/feathers-sequelize/tree/v1.4.3) (2017-03-17)
+[Full Changelog](https://github.com/feathersjs/feathers-sequelize/compare/v1.4.2...v1.4.3)
+
+**Merged pull requests:**
+
+- use 'returning: true' for postgres to keep patch and its response atomic [\#93](https://github.com/feathersjs/feathers-sequelize/pull/93) ([MichaelErmer](https://github.com/MichaelErmer))
+
+## [v1.4.2](https://github.com/feathersjs/feathers-sequelize/tree/v1.4.2) (2017-03-14)
+[Full Changelog](https://github.com/feathersjs/feathers-sequelize/compare/v1.4.1...v1.4.2)
+
+**Merged pull requests:**
+
+- Fixed missing where clause [\#92](https://github.com/feathersjs/feathers-sequelize/pull/92) ([eikaramba](https://github.com/eikaramba))
+
+## [v1.4.1](https://github.com/feathersjs/feathers-sequelize/tree/v1.4.1) (2017-03-10)
+[Full Changelog](https://github.com/feathersjs/feathers-sequelize/compare/v1.4.0...v1.4.1)
+
+**Closed issues:**
+
+- $populate does not seem to work [\#89](https://github.com/feathersjs/feathers-sequelize/issues/89)
+- updated\_at column does not get updated at PATCH request [\#88](https://github.com/feathersjs/feathers-sequelize/issues/88)
+- Suggested pattern to create a multi model service [\#86](https://github.com/feathersjs/feathers-sequelize/issues/86)
+- GroupBy issue [\#84](https://github.com/feathersjs/feathers-sequelize/issues/84)
+- Concat and other sequelize functions [\#81](https://github.com/feathersjs/feathers-sequelize/issues/81)
+- Solved: How to add relationship [\#80](https://github.com/feathersjs/feathers-sequelize/issues/80)
+- Consider creating a sequelize instance during updates: [\#63](https://github.com/feathersjs/feathers-sequelize/issues/63)
+
+**Merged pull requests:**
+
+- Enable eager-loading for GET endpoint [\#91](https://github.com/feathersjs/feathers-sequelize/pull/91) ([eikaramba](https://github.com/eikaramba))
+- Update index.js [\#83](https://github.com/feathersjs/feathers-sequelize/pull/83) ([Ryanthegiantlion](https://github.com/Ryanthegiantlion))
+- doc: fix README.md comment. [\#82](https://github.com/feathersjs/feathers-sequelize/pull/82) ([omeid](https://github.com/omeid))
+
+## [v1.4.0](https://github.com/feathersjs/feathers-sequelize/tree/v1.4.0) (2016-11-11)
+[Full Changelog](https://github.com/feathersjs/feathers-sequelize/compare/v1.3.3...v1.4.0)
+
+**Closed issues:**
+
+- TypeError: Cannot read property '2' of null [\#71](https://github.com/feathersjs/feathers-sequelize/issues/71)
+- ES6/Babel [\#68](https://github.com/feathersjs/feathers-sequelize/issues/68)
+
+**Merged pull requests:**
+
+- Update feathers-service-tests to version 0.9.0 🚀 [\#79](https://github.com/feathersjs/feathers-sequelize/pull/79) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- sequelize@3.25.0 breaks build 🚨 [\#78](https://github.com/feathersjs/feathers-sequelize/pull/78) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- sequelize@3.24.8 breaks build 🚨 [\#77](https://github.com/feathersjs/feathers-sequelize/pull/77) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- 👻😱 Node.js 0.10 is unmaintained 😱👻 [\#76](https://github.com/feathersjs/feathers-sequelize/pull/76) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- babel-preset-es2015@6.18.0 breaks build 🚨 [\#75](https://github.com/feathersjs/feathers-sequelize/pull/75) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- jshint —\> semistandard [\#72](https://github.com/feathersjs/feathers-sequelize/pull/72) ([corymsmith](https://github.com/corymsmith))
+
+## [v1.3.3](https://github.com/feathersjs/feathers-sequelize/tree/v1.3.3) (2016-09-28)
+[Full Changelog](https://github.com/feathersjs/feathers-sequelize/compare/v1.3.2...v1.3.3)
 
 **Merged pull requests:**
 

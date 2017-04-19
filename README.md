@@ -1,6 +1,13 @@
 # feathers-sequelize
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/feathersjs/feathers-sequelize.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/feathersjs/feathers-sequelize.png?branch=master)](https://travis-ci.org/feathersjs/feathers-sequelize)
+[![Code Climate](https://codeclimate.com/github/feathersjs/feathers-sequelize.png)](https://codeclimate.com/github/feathersjs/feathers-sequelize)
+[![Test Coverage](https://codeclimate.com/github/feathersjs/feathers-sequelize/badges/coverage.svg)](https://codeclimate.com/github/feathersjs/feathers-sequelize/coverage)
+[![Dependency Status](https://img.shields.io/david/feathersjs/feathers-sequelize.svg?style=flat-square)](https://david-dm.org/feathersjs/feathers-sequelize)
+[![Download Status](https://img.shields.io/npm/dm/feathers-sequelize.svg?style=flat-square)](https://www.npmjs.com/package/feathers-sequelize)
+[![Slack Status](http://slack.feathersjs.com/badge.svg)](http://slack.feathersjs.com)
 
 > A service adapter for [Sequelize](http://sequelizejs.com), an SQL ORM
 
@@ -61,7 +68,7 @@ const app = feathers()
 // Removes all database content
 Todo.sync({ force: true });
 
-// Create an in-memory Feathers service with a default page size of 2 items
+// Create an sqlite backed Feathers service with a default page size of 2 items
 // and a maximum size of 4
 app.use('/todos', service({
   Model: Todo,
